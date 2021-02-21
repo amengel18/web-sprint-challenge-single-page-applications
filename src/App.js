@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Route, Link, Switch } from 'react-router-dom'
 import axios from 'axios';
-import PizzaForm from './PizzaForm'
+import Pizza from './Pizza'
 import HomePage from './HomePage'
 import ConfirmPage from './ConfirmPage'
 import * as Yup from 'yup'
@@ -21,7 +21,7 @@ const App = () => {
           <HomePage />
         </Route>
         <Route path="/pizza">
-          <PizzaForm />
+          <Pizza />
         </Route>
         <Route path="/confirm">
           <ConfirmPage />
