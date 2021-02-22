@@ -14,16 +14,7 @@ const initialFormValues = {
     sausage: false,
     canadianBacon: false,
     spicyItalianSausage: false,
-    grilledChicken: false,
-    onions: false,
-    greenPeppers: false,
-    dicedTomatoes: false,
-    blackOlives: false,
-    roastedGarlic: false,
-    artichokeHearts: false,
-    threeCheese: false,
-    pineapple: false,
-    extraCheese: false,
+
 
     // text input //
     instructions: ''
@@ -37,12 +28,13 @@ const initialFormErros = {
 }
 
 const initialPizza = []
-
+const initialDisabled = true
 
 export default  function Pizza() {
   const [pizza, setPizza] = useState(initialPizza)
   const [formValues, setFormValues] = useState(initialFormValues)
   const [formErrors, setFormErrors] = useState(initialFormErros)
+  const [disabled, setDisabled] = useState(initialDisabled)
 
   const postNewPizza = newPizza => {
     axios.post("https://reqres.in/")
